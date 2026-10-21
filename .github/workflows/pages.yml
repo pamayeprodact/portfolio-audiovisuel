@@ -22,10 +22,16 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - name: Set up Python for CV generation
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install PDF generation library
+        run: python -m pip install reportlab
       - name: Install image tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y imagemagick ffmpeg
+          sudo apt-get install -y imagemagick ffmpeg fonts-dejavu-core
       - name: Prepare website files and crop background photo
         run: |
           mkdir -p _site/images
@@ -35,6 +41,8 @@ jobs:
           # The uploaded source is a JPEG saved with a HEIC filename.
           # Crop a panoramic band that keeps the multiview wall, console and operator visible.
           convert "images/Image ChatGPT 21 oct. 2026, 00_13_47.heic" -crop 1152x500+0+650 +repage -resize 1600x695! -quality 88 "_site/images/regie-diffusion-2stv.jpg"
+      - name: Generate downloadable CV PDF
+        run: python scripts/generate_cv.py "_site/cv-pamaye.pdf"
       - name: Optimise the making-of video for web playback
         run: |
           mkdir -p "_site/images/videos"
