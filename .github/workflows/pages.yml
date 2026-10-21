@@ -22,16 +22,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
-      - name: Install HEIF converter
+      - name: Install image tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y libheif-examples
-      - name: Prepare website files and convert background photo
+          sudo apt-get install -y imagemagick
+      - name: Prepare website files and crop background photo
         run: |
           mkdir -p _site/images
           cp index.html _site/
           cp -a images/. _site/images/
-          cp "images/Image ChatGPT 21 oct. 2026, 00_13_47.heic" "_site/images/regie-diffusion-2stv.jpg"
+          # The uploaded source is a JPEG saved with a HEIC filename.
+          # Crop a panoramic band that keeps the multiview wall, console and operator visible.
+          magick "images/Image ChatGPT 21 oct. 2026, 00_13_47.heic" -crop 1152x500+0+650 +repage -resize 1600x695 -quality 88 "_site/images/regie-diffusion-2stv.jpg"
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
