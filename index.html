@@ -33,6 +33,15 @@
 @media(max-width:760px){.gallery-stage{aspect-ratio:4/3;min-height:0}.gallery-slide figcaption{padding:40px 16px 15px}.gallery-slide figcaption span{font-size:.83rem}.gallery-controls{gap:8px;padding:10px}.gallery-toggle{font-size:.85rem;padding:7px 9px}}
 @media(prefers-reduced-motion:reduce){.gallery-slide.is-active{animation:none}}
 @media(max-width:760px){.hero{min-height:0;grid-template-columns:1fr;padding:55px 4%;background-position:62% center;}.portrait{min-height:230px}.stats{grid-template-columns:1fr}.grid,.about{grid-template-columns:1fr}.section-head{display:block}.top{align-items:flex-start;flex-direction:column}nav{gap:14px}.contact{align-items:flex-start}}
+
+.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.project-card{position:relative;overflow:hidden;background:linear-gradient(150deg,#172633,#101820 80%);border:1px solid var(--line);border-radius:13px;padding:22px;min-height:255px;display:flex;flex-direction:column}
+.project-card:after{content:"";position:absolute;width:150px;height:150px;border:1px solid rgba(230,184,92,.18);border-radius:50%;right:-65px;top:-75px;pointer-events:none}
+.project-mark{display:flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:12px;background:rgba(230,184,92,.1);border:1px solid rgba(230,184,92,.55);color:var(--gold);font-size:.9rem;font-weight:900;letter-spacing:.04em;margin-bottom:18px}
+.project-card .tag{margin-bottom:4px}.project-card h3{font-size:1.14rem;line-height:1.3;margin:7px 0 10px}.project-card p{color:var(--muted);margin:0 0 14px;font-size:.96rem}.project-card .project-foot{margin-top:auto;padding-top:12px;color:#d1ad62;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+@media(max-width:900px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.project-grid{grid-template-columns:1fr}.project-card{min-height:0}}
+
 </style>
 
 <link rel="canonical" href="https://pamayeprodact.github.io/portfolio-audiovisuel/">
@@ -95,7 +104,7 @@
 <body>
 <header class="wrap top">
   <a class="brand" href="#accueil" style="text-decoration:none">PAMAYE<span>.</span> AUDIOVISUEL</a>
-  <nav aria-label="Navigation principale"><a href="#profil">Profil</a><a href="#realisations">Réalisations</a><a href="#competences">Compétences</a><a href="#contact">Contact</a></nav>
+  <nav aria-label="Navigation principale"><a href="#profil">Profil</a><a href="#realisations">Réalisations</a><a href="#projets-personnels">Mes projets</a><a href="#competences">Compétences</a><a href="#contact">Contact</a></nav>
 </header>
 <main>
   <section class="wrap hero" id="accueil" style="border:0">
@@ -131,6 +140,60 @@
       <article class="card"><div class="tag">Institutionnel · Partenariat</div><h3>DER/FJ — Captation et direct</h3><p>Captation et réalisation du direct dans le cadre d’un événement avec la DER/FJ, partenaire de la 2STV.</p><small>Sénégal</small></article>
     </div>
     <p class="note">Les vidéos de démonstration seront ajoutées via des liens de partage ou des vidéos hébergées sur une plateforme externe. Les fichiers vidéo volumineux ne sont pas stockés dans ce dépôt du site.</p>
+  </div></section>
+  <section id="projets-personnels"><div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">Création · Innovation · Entrepreneuriat</div><h2>Mes projets personnels</h2></div><p>Au-delà des plateaux et des régies, je développe des initiatives autour de la production audiovisuelle, de la promotion du Sénégal et des services numériques.</p></div>
+    <div class="project-grid">
+      <article class="project-card">
+        <div class="project-mark" aria-hidden="true">P’ A</div>
+        <div class="tag">Entreprise créative</div>
+        <h3>PAMAYE PROD’ACT</h3>
+        <p>Projet d’entreprise dédié à la production audiovisuelle et à la communication digitale : contenus vidéo, création visuelle, couverture événementielle et valorisation des marques.</p>
+        <div class="project-foot">Audiovisuel · Communication digitale</div>
+      </article>
+      <article class="project-card">
+        <div class="project-mark" aria-hidden="true">SEE</div>
+        <div class="tag">Promotion touristique</div>
+        <h3>SEE SENEGAL</h3>
+        <p>Projet de série promotionnelle consacrée à la destination Sénégal, pour mettre en lumière les territoires, les paysages, le patrimoine, la culture et les expériences à découvrir.</p>
+        <div class="project-foot">Destination Sénégal · Série promotionnelle</div>
+      </article>
+      <article class="project-card">
+        <div class="project-mark" aria-hidden="true">SR</div>
+        <div class="tag">Plateforme numérique</div>
+        <h3>SENEGAL REK</h3>
+        <p>Concept de plateforme numérique pour accompagner la découverte du Sénégal : destinations, hébergements, restaurants, transport, agenda culturel et orientation des visiteurs avec des fonctionnalités intelligentes.</p>
+        <div class="project-foot">Tourisme · Services numériques</div>
+      </article>
+      <article class="project-card">
+        <div class="project-mark" aria-hidden="true">SZ</div>
+        <div class="tag">Média numérique</div>
+        <h3>SUNU ZAP 3.0</h3>
+        <p>Concept d’interface de guide TV numérique, pensé pour rendre les programmes et les chaînes plus faciles à explorer grâce à une expérience visuelle moderne.</p>
+        <div class="project-foot">Télévision · Expérience numérique</div>
+      </article>
+      <article class="project-card">
+        <div class="project-mark" aria-hidden="true">K’P</div>
+        <div class="tag">Information & digital</div>
+        <h3>KaF’Post</h3>
+        <p>Projet de portail numérique dédié au relais d’informations et à la mise en valeur des contenus d’actualité sur les plateformes digitales.</p>
+        <div class="project-foot">Média digital · Réseaux sociaux</div>
+      </article>
+      <article class="project-card">
+        <div class="project-mark" aria-hidden="true">KS</div>
+        <div class="tag">Marque & identité locale</div>
+        <h3>Kaffrine Sama Deuk</h3>
+        <p>Concept de marque de tee-shirts inspirée par l’identité locale et l’attachement à Kaffrine, avec une orientation visuelle ancrée dans le territoire.</p>
+        <div class="project-foot">Marque · Création visuelle</div>
+      </article>
+      <article class="project-card">
+        <div class="project-mark" aria-hidden="true">KID</div>
+        <div class="tag">Loisirs & événementiel</div>
+        <h3>Parc d’attractions pour enfants à Kaffrine</h3>
+        <p>Projet de loisirs familiaux autour de jeux et d’activités pour enfants, avec une réflexion sur les équipements, l’organisation et la présentation de l’événement.</p>
+        <div class="project-foot">Loisirs · Événementiel</div>
+      </article>
+    </div>
   </div></section>
   <section id="galerie"><div class="wrap">
     <div class="section-head"><div><div class="eyebrow">En images</div><h2>Galerie audiovisuelle</h2></div><p>Photos de terrain, de régie et de captation fournies pour ce portfolio. Le diaporama défile automatiquement, avec commandes manuelles.</p></div>
