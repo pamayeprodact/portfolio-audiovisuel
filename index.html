@@ -42,6 +42,11 @@
 @media(max-width:900px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.project-grid{grid-template-columns:1fr}.project-card{min-height:0}}
 
+
+.vacances-card{gap:8px}
+.vacances-video-wrap{margin:8px 0 10px;overflow:hidden;border:1px solid var(--line);border-radius:9px;background:#05090d}
+.vacances-video-wrap video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#05090d}
+
 </style>
 
 <link rel="canonical" href="https://pamayeprodact.github.io/portfolio-audiovisuel/">
@@ -136,7 +141,18 @@
       <article class="card"><div class="tag">Mode · Événementiel</div><h3>Independence Show — Saly</h3><p>Défilé de mode : mise en place d’une régie de captation et de réalisation.</p><small>Saly, Sénégal · Édition 2</small></article>
       <article class="card"><div class="tag">Culture · International</div><h3>Spécial Laylatoul Khadre — Maroc, 2024</h3><p>Installation de la régie de captation et de réalisation, puis réalisation du direct diffusé sur la 2STV.</p><p><a class="link" href="https://youtu.be/olP9wP4LK2E" target="_blank" rel="noopener">Voir la vidéo sur YouTube ↗</a></p><small>Maroc · 2024</small></article>
       <article class="card"><div class="tag">Institutionnel · Direct</div><h3>Inauguration de l’aéroport de Saint-Louis</h3><p>Mission de technicien chargé de la captation et de la réalisation du direct.</p><small>Saint-Louis, Sénégal</small></article>
-      <article class="card"><div class="tag">Culture · Divertissement</div><h3>Vacances de ouf</h3><p>Participation technique à la production audiovisuelle d’un événement culturel organisé pendant les vacances scolaires.</p><small>Sénégal</small></article>
+      <article class="card vacances-card">
+        <div class="tag">Culture · Divertissement · Making-of</div>
+        <h3>Vacances de ouf — Making-of</h3>
+        <p>Coordination des activités et des jeux, organisation du dispositif technique, mise en place d’une régie de captation et participation à la réalisation audiovisuelle.</p>
+        <div class="vacances-video-wrap">
+          <video controls preload="none" playsinline poster="images/regie-diffusion-2stv.jpg" aria-label="Making-of de Vacances de ouf — coordination, régie de captation et réalisation">
+            <source src="images/videos/vacances-de-ouf-making-of.mp4" type="video/mp4">
+            Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
+          </video>
+        </div>
+        <small>Sénégal · Making-of disponible en lecture au clic</small>
+      </article>
       <article class="card"><div class="tag">Institutionnel · Partenariat</div><h3>DER/FJ — Captation et direct</h3><p>Captation et réalisation du direct dans le cadre d’un événement avec la DER/FJ, partenaire de la 2STV.</p><small>Sénégal</small></article>
     </div>
     <p class="note">Les vidéos de démonstration seront ajoutées via des liens de partage ou des vidéos hébergées sur une plateforme externe. Les fichiers vidéo volumineux ne sont pas stockés dans ce dépôt du site.</p>
