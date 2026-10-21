@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pamayeprodact.github.io/portfolio-audiovisuel/sitemap.xml
