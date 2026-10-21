@@ -68,6 +68,10 @@ styles.add(ParagraphStyle(
     textColor=INK, spaceAfter=1
 ))
 styles.add(ParagraphStyle(
+    name="CVHeaderContact", fontName=REGULAR, fontSize=7.25, leading=9.5,
+    textColor=WHITE, spaceAfter=1
+))
+styles.add(ParagraphStyle(
     name="CVIntro", fontName=REGULAR, fontSize=7.65, leading=10.3,
     textColor=INK, spaceAfter=0
 ))
@@ -159,7 +163,7 @@ header = Table(
             para("PAPA MAMADOU NDIAYE", "CVName"),
             para("PAMAYE  |  AUDIOVISUEL · RÉGIE DIFFUSION · RÉALISATION EN DIRECT", "CVTagline"),
         ],
-        para("<b>DAKAR, SÉNÉGAL</b><br/>+221 77 317 57 56<br/>ndiayepamaye@gmail.com", "CVContact")
+        para("<b>DAKAR, SÉNÉGAL</b><br/>+221 77 317 57 56<br/>ndiayepamaye@gmail.com", "CVHeaderContact")
     ]],
     colWidths=[CONTENT_W * 0.68, CONTENT_W * 0.32]
 )
