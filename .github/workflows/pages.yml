@@ -25,7 +25,7 @@ jobs:
       - name: Install image tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y imagemagick
+          sudo apt-get install -y imagemagick ffmpeg
       - name: Prepare website files and crop background photo
         run: |
           mkdir -p _site/images
@@ -35,6 +35,10 @@ jobs:
           # The uploaded source is a JPEG saved with a HEIC filename.
           # Crop a panoramic band that keeps the multiview wall, console and operator visible.
           convert "images/Image ChatGPT 21 oct. 2026, 00_13_47.heic" -crop 1152x500+0+650 +repage -resize 1600x695! -quality 88 "_site/images/regie-diffusion-2stv.jpg"
+      - name: Optimise the making-of video for web playback
+        run: |
+          mkdir -p "_site/images/videos"
+          ffmpeg -hide_banner -loglevel error -y -i "images/videos/vacances-de-ouf-making-of.mp4" -vf "scale=min(1280\,iw):-2" -c:v libx264 -preset medium -crf 27 -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart "_site/images/videos/vacances-de-ouf-making-of.mp4"
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
