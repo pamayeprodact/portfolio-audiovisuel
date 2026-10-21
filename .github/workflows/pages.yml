@@ -30,6 +30,7 @@ jobs:
         run: |
           mkdir -p _site/images
           cp index.html _site/
+          cp robots.txt sitemap.xml _site/
           cp -a images/. _site/images/
           # The uploaded source is a JPEG saved with a HEIC filename.
           # Crop a panoramic band that keeps the multiview wall, console and operator visible.
