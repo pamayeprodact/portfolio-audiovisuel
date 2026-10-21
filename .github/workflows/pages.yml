@@ -33,7 +33,7 @@ jobs:
           cp -a images/. _site/images/
           # The uploaded source is a JPEG saved with a HEIC filename.
           # Crop a panoramic band that keeps the multiview wall, console and operator visible.
-          magick "images/Image ChatGPT 21 oct. 2026, 00_13_47.heic" -crop 1152x500+0+650 +repage -resize 1600x695 -quality 88 "_site/images/regie-diffusion-2stv.jpg"
+          convert "images/Image ChatGPT 21 oct. 2026, 00_13_47.heic" -crop 1152x500+0+650 +repage -resize 1600x695! -quality 88 "_site/images/regie-diffusion-2stv.jpg"
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
