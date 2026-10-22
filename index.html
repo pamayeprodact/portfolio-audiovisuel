@@ -49,6 +49,15 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 .featured-content .feature-meta{margin-top:14px;color:#94a4b0;font-size:.85rem}
 @media(max-width:760px){.featured-card{grid-template-columns:1fr}.featured-media{min-height:0;aspect-ratio:16/9}.featured-media img{min-height:0;height:100%;aspect-ratio:16/9}.featured-content{padding:21px}}
 
+
+.setalert-card{padding:0;min-height:0;overflow:hidden}
+.setalert-card .project-art{display:block;width:100%;aspect-ratio:1200/760;object-fit:cover;border-bottom:1px solid var(--line);background:#eaf8ff}
+.setalert-card .project-copy{padding:22px;display:flex;flex-direction:column;align-items:flex-start;flex:1}
+.setalert-card .project-copy h3{font-size:1.35rem}
+.setalert-card .project-copy p{width:100%}
+.setalert-card .project-foot{margin-top:auto}
+@media(max-width:560px){.setalert-card .project-copy{padding:20px}}
+
 .project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .project-card{position:relative;overflow:hidden;background:linear-gradient(150deg,#172633,#101820 80%);border:1px solid var(--line);border-radius:13px;padding:22px;min-height:255px;display:flex;flex-direction:column}
 .project-card:after{content:"";position:absolute;width:150px;height:150px;border:1px solid rgba(230,184,92,.18);border-radius:50%;right:-65px;top:-75px;pointer-events:none}
@@ -279,13 +288,15 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
         <p>Projet de loisirs familiaux autour de jeux et d’activités pour enfants, avec une réflexion sur les équipements, l’organisation et la présentation de l’événement.</p>
         <div class="project-foot">Loisirs · Événementiel</div>
       </article>
-      <article class="project-card">
-        <div class="project-mark" aria-hidden="true">SA<br><small>DAKAR</small></div>
-        <div class="tag">Projet en cours de réalisation</div>
-        <h3>SetAlert Dakar</h3>
-        <p>Plateforme citoyenne en cours de conception pour signaler les problèmes d’insalubrité à Dakar. Le projet vise à permettre aux habitants de transmettre un signalement accompagné d’une photo, de localiser automatiquement la zone concernée et de suivre l’évolution du traitement.</p>
-        <p>Les signalements envisagés concernent notamment les déchets accumulés, la voirie dégradée, les eaux usées et d’autres problèmes d’insalubrité. L’ambition est de faciliter le dialogue entre citoyens et collectivités et de contribuer à un cadre de vie plus propre.</p>
-        <div class="project-foot">Citoyenneté · Environnement · Géolocalisation · Application en préparation</div>
+      <article class="project-card setalert-card">
+        <img class="project-art" src="images/projets/setalert-dakar.svg" alt="Visuel de présentation du projet SetAlert Dakar, plateforme citoyenne de signalement de l’insalubrité" loading="lazy" decoding="async">
+        <div class="project-copy">
+          <div class="tag">Projet en cours de réalisation</div>
+          <h3>SetAlert Dakar</h3>
+          <p>Plateforme citoyenne en cours de conception pour signaler les problèmes d’insalubrité à Dakar. Le projet vise à permettre aux habitants de transmettre un signalement accompagné d’une photo, de localiser automatiquement la zone concernée et de suivre l’évolution du traitement.</p>
+          <p>Les signalements envisagés concernent notamment les déchets accumulés, la voirie dégradée, les eaux usées et d’autres problèmes d’insalubrité. L’ambition est de faciliter le dialogue entre citoyens et collectivités et de contribuer à un cadre de vie plus propre.</p>
+          <div class="project-foot">Citoyenneté · Environnement · Géolocalisation · Application en préparation</div>
+        </div>
       </article>
       <article class="project-card">
         <div class="project-mark" aria-hidden="true">SB</div>
